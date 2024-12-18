@@ -1,0 +1,197 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>Start_JavaScript</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+       
+    </head>
+    <body>
+       
+        <h1 title="Welcome page">Welcome</h1>  
+         
+          <div class="categories">  <a id="page2"  href="Page2.html"  >Page 2 </a></div>
+
+<img src="IMAGINE.png"weight="200" height="200" >
+        <table border="11">
+            
+            <tr>
+             <td id="td1">Hello data</td> 
+                <td>I am more data</td>
+            </tr>
+            <tr>
+                <td>Hello data</td>
+            </tr>
+            <tr>
+                <td>Hello data</td>
+            </tr>
+            <tr>
+                <td>Hello data</td>
+            </tr>
+        </table>
+<ul>
+    <li>
+        
+    </li>
+    <li>
+        Milk
+    </li>
+</ul>
+<div>Hello, how are you
+    <form action="https://youtu.be/SBmSRK3feww" method="GET">
+        <input type="text" name="name" placeholder="Name">
+        <button id="button" type="submit">submit</button>
+    </form>
+</div>
+
+
+    <span class="material-symbols-outlined">
+        local_shipping
+        </span>
+       <i id="shopping_cart" class="fa fa-cart-shopping fa-thin"></i>
+       <i class="fa fa-star fa-thin"></i>
+           <div id="quantityProducts">
+
+           </div>
+ 
+
+    <textarea id="textarea" rows="4" cols="50">
+    </textarea>
+    
+   
+  <!-- ************************Way to remove items from a cart and keep the number even after refreshing the page-->
+  <span id="cartCount"></span> 
+  <span id="cart2" class="material-symbols-outlined">
+    shopping_cart
+    </span>
+    <span id="cart2" class="material-symbols-outlined">
+      shopping_cart
+      </span>
+  
+
+            <div class="localStorage">
+            <button id="addToCart">Add to cart</button> 
+            <span id="cartCount"></span> 
+            <button id="removeFromCart">Remove from cart</button>
+            
+        </div >
+
+        <div id="boxCONSOLE">
+
+        </div>
+        <div id="DiscordBorder" class="DiscordBorder" style="height: 50px;width:50px ;">  <a href="https://discord.com/">  <i  id="logoDiscord" class="fa-brands fa-discord"></i> </a></div>
+    <br>
+<div id="Discord2"></div>
+<i style="position: absolute;top: 300px; left: 300px;" class="fa-solid fa-heart"></i>
+<i style="position: absolute;top: 400px; left: 300px;" class="fa-regular fa-heart"></i>
+
+<script>document.getElementById('Discord2').innerHTML=`  <i style="position:absolute;"  class="fa-brands fa-discord"></i> `;</script>
+
+
+
+
+
+  <!--------------------------------------------------------- Script --------------------------------------->
+            <script id="shopping_cartAS">
+                let cartCount = 0;
+            
+            if(localStorage.getItem("quantityProducts")) {
+              cartCount = localStorage.getItem("quantityProducts");
+              document.getElementById("quantityProducts").innerText = cartCount;
+            }
+            
+            document.getElementById("addToCart").addEventListener("click", function() {
+              cartCount++; 
+              //When the Add to Cart button is clicked you add a 1 to "let cartCount=0;"
+    //you can also do cartQuantity+=1 or cartQuantity*=1 or cartQuantity-- or cartQuantity/=1 for different results 
+              localStorage.setItem("quantityProducts", cartCount);
+              document.getElementById("quantityProducts").innerText = cartCount;
+            })
+            
+            window.onload = function() {
+              if(localStorage.getItem("quantityProducts")) {
+                cartCount = localStorage.getItem("quantityProducts");
+                document.getElementById("quantityProducts").innerText = cartCount;  
+              }
+            }
+            if(localStorage.getItem("quantityProducts")) {
+              cartCount = localStorage.getItem("quantityProducts");  
+              document.getElementById("quantityProducts").innerText = cartCount;
+            }
+            
+            document.getElementById("removeFromCart").addEventListener("click", function() {
+              if(cartCount > 0) {
+                cartCount--;  
+                localStorage.setItem("quantityProducts", cartCount);
+                document.getElementById("quantityProducts").innerText = cartCount;
+              }
+            })
+            
+            window.onload = function() {
+              if(localStorage.getItem("quantityProducts")) {
+                cartCount = localStorage.getItem("quantityProducts");
+                document.getElementById("quantityProducts").innerText = cartCount;  
+              }
+            }
+</script>
+    
+
+<script id="MethodeObjectFunction">
+    /************************************ IN THE CONSOLE YOU MUST INSPECT!!!!! ******************************/   
+
+            console.log('hello'.length);//tells us the length of the word --> '5'
+            console.log('hello'.toLocaleUpperCase()/*toUpperCase()*/); //capitalize 'hello'-->'HELLO'
+
+            const object1 = {
+                message:'hello',
+                price:7.99
+            };
+         const object2=object1;//copy by reference
+         object1.message='Good job!';//change the text of 'message'
+         console.log(object2);
+console.log(object1.message);
+console.log(object2.price);
+let prixArticle=4.00;
+const object5 = {
+    method()
+    {
+        console.log('method'+' '+' How are you');
+    },
+    nomArticle:'coat'+' '+' Price:'+' '+(prixArticle+1)+'$',
+    
+}
+object5.method();
+console.log(object5.nomArticle)
+         
+/************************************ IN THE CONSOLE YOU MUST INSPECT!!!!! ******************************/
+document.getElementById('boxCONSOLE').innerHTML=object1.message;
+            </script>
+
+
+<!---------------------------------- Document Object Model(D0M) -------------------->
+<button id="buttonDOM">DOM</button>
+<div id="textTObutton">
+<p>hello</p>
+</div>
+<div id="Queryselector">
+    <p>hello</p>
+    </div>
+<script id="DocumentObjetctModel">
+document.title='Changed';//change the title of the page
+console.log(document.body);//selects the entire <body> of the web page
+document.getElementById('textTObutton').innerHTML='<button>Reverse Text</button>'; //remove previous html and replace it with button
+document.querySelector('#Queryselector').innerHTML="Hello i'm Bob and how are you?";//you can directly select id 'Queryselector' and replace the sentence
+
+document.getElementById('textTObutton').addEventListener("click",function()//makes it so that when you press 'textTObutton', the image appears
+{
+document.getElementById('Queryselector').innerHTML='<img src="IMAGINE.png"weight="200" height="200" >';
+
+})
+</script>
+<script src="index.js"></script>
+
+    </body>
+
+</html>
